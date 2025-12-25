@@ -1,0 +1,34 @@
+{
+  "name": "linkorb/x-dns-component",
+  "description": "Cross-provider DNS configuration management component",
+  "type": "symfony-bundle",
+  "license": "proprietary",
+  "homepage": "https://github.com/linkorb/x-dns-component",
+  "keywords": ["dns", "transip", "zone-management", "linkorb"],
+  "authors": [
+    {
+      "name": "LinkORB Engineering",
+      "email": "engineering@linkorb.com",
+      "role": "Development"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.packagist.com/linkorb"
+    },
+    {
+      "packagist.org": false
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "LinkORB\\Component\\XDns\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "transip/transip-api-php": "^6",
+    "symfony/yaml": "^7.0"
+  }
+}
