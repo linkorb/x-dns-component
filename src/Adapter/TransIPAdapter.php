@@ -2,8 +2,8 @@
 
 namespace LinkORB\Component\XDns\Adapter;
 
-use LinkORB\Component\XDns\Model\Zone;
 use LinkORB\Component\XDns\Model\Record;
+use LinkORB\Component\XDns\Model\Zone;
 use Transip\Api\Library\TransipAPI;
 
 class TransIPAdapter implements XDnsAdapterInterface
@@ -63,7 +63,7 @@ class TransIPAdapter implements XDnsAdapterInterface
 
     public function pushZone(Zone $zone)
     {
-
+        $entries = [];
         foreach ($zone->getRecords() as $record) {
             $entry = new \Transip\Api\Library\Entity\Domain\DnsEntry();
             $entry->setName($record->getName());
